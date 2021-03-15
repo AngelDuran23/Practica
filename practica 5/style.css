@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    font-family: Arial;
+}
+
+#documento {
+    background-color: rgb(201,194,192);
+    width: 670px;
+    height: 1000px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#imagen {
+    width: 500px;
+    display: block;
+    margin: auto;
+    padding-top: 125px;
+}
+
+#titulo {
+    font-weight: 500;
+    font-size: 35px;
+    padding-top: 70px;
+}
+
+#texto {
+    text-align: left;
+    width: 610px;
+    display: block;
+    margin: auto;
+    font-size: 22px;
+    padding-top: 40px;
+    line-height: 35px;
+}
+
+#boton {
+    background-color: rgb(236,31,37);
+    font-size: 35px;
+    color: rgb(252,254,255);
+    font-weight: bold;
+    border-radius: 12px;
+    width: fit-content;
+    padding: 15px 45px;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+    /* user-select: none; */
+}
