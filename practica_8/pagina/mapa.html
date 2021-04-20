@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 550px;
+            width:650px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"> </div>
+    <script>
+        function initMap() {
+            var location = {
+                lat:26.11272311599606,
+                lng:-80.28872828106469
+
+                 
+                // lat: 18.452630854734966,
+                // lng: -69.9275759027278
+                
+            };
+            var map = new google.maps.Map(document.getElementById("map"),{
+                zoom:15, 
+                center:location
+            });
+            const image ="./imagenes/avion.png";
+            var marker = new google.maps.Marker({
+                position:location,
+                map: map,
+                title: "Hello World!",
+                icon: image,
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+        content: 'La Jeva Tuya'
+      })
+      infowindow.open(map, marker);
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+            
+        }
+        
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC-ttgVAuvOVPGbJ1lZWnDWki0jJPnBg4&callback=initMap">
+
+    </script>
+
+
+</body>
+
+</html>
